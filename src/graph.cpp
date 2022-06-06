@@ -1,7 +1,7 @@
 #include "graph.hpp"
 #include <iostream>
 
-Graph::Graph(){
+GraphAbs::Graph::Graph(){
 
     std::cout << "Graph constructor called! " << std::endl;
 

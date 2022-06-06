@@ -4,6 +4,7 @@
 #include <vector>
 #include <unordered_map>
 
+namespace GraphAbs {
 
 class Graph {
 
@@ -13,7 +14,9 @@ class Graph {
     private:
         std::unordered_map<int, std::vector<int>> _adjList;
 
-};
+}; //class
 
+
+} //namespace
 
 #endif
