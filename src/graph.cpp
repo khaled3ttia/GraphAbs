@@ -7,6 +7,13 @@ GraphAbs::Graph::Graph(){
 
 }
 
+
+GraphAbs::Graph::Graph(std::initializer_list<std::pair<int,int>> edges){
+    for (auto edge: edges){
+        _adjList[edge.first].emplace_back(edge.second);
+    }
+}
+
 void GraphAbs::Graph::printList(){
     std::cout << "Adjacency List of the Graph:" << std::endl;
     std::cout << "===========================" << std::endl;

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <unordered_map>
+#include <initializer_list>
 #include <utility> // std::pair
 
 namespace GraphAbs {
@@ -12,6 +13,7 @@ class Graph {
     public:
         Graph();
         
+        /*
         template<typename ...Pairs>
             Graph(Pairs... edges){
                 std::vector<std::pair<int, int>> args { edges... };
@@ -19,7 +21,10 @@ class Graph {
                     _adjList[edge.first].emplace_back(edge.second);
                 }
             }
-            
+        */
+
+        Graph(std::initializer_list<std::pair<int,int>>);
+
         // Prints the contents of the adjacency list
         void printList();
     private:
