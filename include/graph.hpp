@@ -5,7 +5,7 @@
 #include <unordered_map>
 #include <initializer_list>
 #include <utility> // std::pair
-
+#include <algorithm> // std::find
 namespace GraphAbs {
 
 class Graph {
@@ -24,6 +24,10 @@ class Graph {
         */
 
         Graph(std::initializer_list<std::pair<int,int>>);
+
+        // Removes a vertex from the graph
+        // Returns the total number of edges removed due to this operation
+        int removeVertex(int);
 
         // Prints the contents of the adjacency list
         void printList();
