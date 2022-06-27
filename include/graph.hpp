@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <unordered_map>
+#include <unordered_set>
 #include <initializer_list>
 #include <utility> // std::pair
 #include <algorithm> // std::find
@@ -33,6 +34,7 @@ class Graph {
         void printList();
     private:
         std::unordered_map<int, std::vector<int>> _adjList;
+        std::unordered_set<int> _vertices;
 
 }; //class
 

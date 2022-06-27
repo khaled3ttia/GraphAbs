@@ -10,7 +10,12 @@ GraphAbs::Graph::Graph(){
 
 GraphAbs::Graph::Graph(std::initializer_list<std::pair<int,int>> edges){
     for (auto edge: edges){
+        // Update the adjacency list
         _adjList[edge.first].emplace_back(edge.second);
+
+        // Add both vertices to the vertices set (duplicates not allowed)
+        _vertices.emplace(edge.first);
+        _vertices.emplace(edge.second);
     }
 }
 
