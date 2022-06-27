@@ -30,6 +30,9 @@ class Graph {
         // Returns the total number of edges removed due to this operation
         int removeVertex(int);
 
+        // Returns the total number of vertices in the graph
+        int getNumVertices() const;
+
         // Prints the contents of the adjacency list
         void printList();
     private:

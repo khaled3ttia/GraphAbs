@@ -56,6 +56,11 @@ int GraphAbs::Graph::removeVertex(int vertex){
     return edgesRemoved;
 }
 
+
+int GraphAbs::Graph::getNumVertices() const {
+    return _vertices.size();
+}
+
 void GraphAbs::Graph::printList(){
     std::cout << "Adjacency List of the Graph:" << std::endl;
     std::cout << "===========================" << std::endl;

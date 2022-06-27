@@ -12,6 +12,8 @@ int main(){
     Graph gr({std::make_pair(10, 5), std::make_pair(5,10), std::make_pair(2, 3), std::make_pair(10, 4), std::make_pair(10, 9)});
 
 
+    std::cout << "Total number of vertices is : " << gr.getNumVertices() << std::endl;
+
     // Print the adjacency list
     gr.printList();
 
