@@ -26,6 +26,9 @@ class Graph {
 
         Graph(std::initializer_list<std::pair<int,int>>);
 
+        // Adds an edge to the graph
+        void addEdge(int, int);
+
         // Removes a vertex from the graph
         // Returns the total number of edges removed due to this operation
         int removeVertex(int);

@@ -10,13 +10,18 @@ GraphAbs::Graph::Graph(){
 
 GraphAbs::Graph::Graph(std::initializer_list<std::pair<int,int>> edges){
     for (auto edge: edges){
-        // Update the adjacency list
-        _adjList[edge.first].emplace_back(edge.second);
-
-        // Add both vertices to the vertices set (duplicates not allowed)
-        _vertices.emplace(edge.first);
-        _vertices.emplace(edge.second);
+        GraphAbs::Graph::addEdge(edge.first, edge.second);
     }
+}
+
+void GraphAbs::Graph::addEdge(int src, int dst){
+    // Assuming directed graphs here
+    _adjList[src].emplace_back(dst);
+
+    // Add both vertices to the vertices set (duplicates not allowed)
+    _vertices.emplace(src);
+    _vertices.emplace(dst); 
+
 }
 
 int GraphAbs::Graph::removeVertex(int vertex){
